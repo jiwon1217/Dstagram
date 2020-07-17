@@ -1,5 +1,4 @@
 # Dstagram
-<hr/>   
-- instagram clone coding   
+## instagram clone coding   
 - React.js
 
