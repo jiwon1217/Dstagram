@@ -9,4 +9,4 @@
 # 2020.07.17
 ## 오늘 한 것
 * React 기초 공부
-* <a href="https://github.com/jiwon1217/movie_app_2020"></a>
+* [movieApp](https://github.com/jiwon1217/movie_app_2020)
