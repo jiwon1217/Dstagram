@@ -8,5 +8,5 @@
 
 # 2020.07.17
 ## 오늘 한 것
-* React 기초 공부
+* React 기초 공부, README 생성
 * [movieApp](https://github.com/jiwon1217/movie_app_2020)
