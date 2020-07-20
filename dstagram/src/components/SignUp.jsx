@@ -33,22 +33,16 @@ const useStyles = makeStyles(theme => ({
 function SignUp(props) {
     const classes = useStyles();
 
-    // const logoStyle = {
-    //     fontSize: 50,
-    //     padding: 20
-    // }
-
     return (
         <Box className={classes.root} display="flex" justifyContent="center">
-            <Grid item xs={3} display="flex" justifyContent="center">
+            <Grid item xs={"auto"} display="flex" justifyContent="center">
                 <Paper className={classes.paper} elevation={4}>
                     <Grid container direction="column" alignItems="center" spacing={2}>
-                        <img src={logo} alt='logo' className="logo" width="200" class="center"></img>
-                        {/* <span className="header-logo" style={logoStyle}>Dstagram</span> */}
+                        <img src={logo} alt='logo' className="center" width="200"></img>
                         <Grid item>
                             <TextField
                                 className={classes.rowfield}
-                                color="disabled"
+                                color="primary"
                                 label="휴대폰 번호 또는 이메일 주소"
                                 variant="filled"
                             />
@@ -56,7 +50,7 @@ function SignUp(props) {
                         <Grid item>
                             <TextField
                                 className={classes.rowfield}
-                                color="disabled"
+                                color="primary"
                                 label="성명"
                                 variant="filled"
                             />
@@ -64,7 +58,7 @@ function SignUp(props) {
                         <Grid item>
                             <TextField
                                 className={classes.rowfield}
-                                color="disabled"
+                                color="primary"
                                 label="사용자 이름"
                                 variant="filled"
                             />
@@ -72,7 +66,7 @@ function SignUp(props) {
                         <Grid item>
                             <TextField
                                 className={classes.rowfield}
-                                color="disabled"
+                                color="primary"
                                 label="비밀번호"
                                 type="password"
                                 variant="filled"

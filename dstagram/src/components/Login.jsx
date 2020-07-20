@@ -33,57 +33,53 @@ const useStyles = makeStyles(theme => ({
 function Login(props) {
     const classes = useStyles();
 
-    const logoStyle = {
-        fontSize: 50,
-        padding: 20
-    }
-
     return (
-        <Box className={classes.root} display="flex" justifyContent="center">
-            <Grid item xs={3} display="flex" justifyContent="center">
-                <Paper className={classes.paper} elevation={4}>
-                    <Grid container direction="column" alignItems="center" spacing={2}>
-                        <img src={logo} alt='logo' className="logo" width="200" class="center"></img>
-                        {/* <span className="header-logo" style={logoStyle}>Dstagram</span> */}
-                        <Grid item>
-                            <TextField
-                                className={classes.rowfield}
-                                color="disabled"
-                                label="전화번호, 사용자 이름 또는 이메일"
-                                variant="filled"
-                            />
-                        </Grid>
-                        <Grid item>
-                            <TextField
-                                className={classes.rowfield}
-                                color="disabled"
-                                label="비밀번호"
-                                type="password"
-                                variant="filled"
-                            />
-                        </Grid>
-                        <Grid item>
-                            <Button
-                                className={classes.Button}
-                                variant="contained"
-                                color="primary"
-                            >
-                                로그인
+        <div>
+            <Box className={classes.root} display="flex" justifyContent="center">
+                <Grid item xs={"auto"} display="flex" justifyContent="center">
+                    <Paper className={classes.paper} elevation={4}>
+                        <Grid container direction="column" alignItems="center" spacing={2}>
+                            <img src={logo} alt='logo' className="center" width="200"></img>
+                            <Grid item>
+                                <TextField
+                                    className={classes.rowfield}
+                                    color="primary"
+                                    label="전화번호, 사용자 이름 또는 이메일"
+                                    variant="filled"
+                                />
+                            </Grid>
+                            <Grid item>
+                                <TextField
+                                    className={classes.rowfield}
+                                    color="primary"
+                                    label="비밀번호"
+                                    type="password"
+                                    variant="filled"
+                                />
+                            </Grid>
+                            <Grid item>
+                                <Button
+                                    className={classes.Button}
+                                    variant="contained"
+                                    color="primary"
+                                >
+                                    로그인
                             </Button>
-                        </Grid>
-                        <Grid item>
-                            <Button
-                                className={classes.Button}
-                                variant="contained"
-                                color="primary"
-                            >
-                                가입하기
+                            </Grid>
+                            <Grid item>
+                                <Button
+                                    className={classes.Button}
+                                    variant="contained"
+                                    color="primary"
+                                >
+                                    가입하기
                             </Button>
+                            </Grid>
                         </Grid>
-                    </Grid>
-                </Paper>
-            </Grid>
-        </Box>
+                    </Paper>
+                </Grid>
+            </Box>
+        </div>
     );
 }
 
