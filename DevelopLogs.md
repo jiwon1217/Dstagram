@@ -13,7 +13,7 @@
 
 # 2020.07.18
 ### 오늘 한 것
-* 스터디(Context, Hook, mock-server, axios
+* 스터디(Context, Hook, mock-server, axios)
 
 # 2020.07.20
 ### 오늘 한 것
