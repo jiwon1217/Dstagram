@@ -1,20 +1,21 @@
 # 2020.07.16
-## ¿À´Ã ÇÑ °Í
-* ½ºÅä¸®º¸µå ¿Ï¼º
-* React °øºÎ(life cycle method, async await)
+## ì˜¤ëŠ˜ í•œ ê²ƒ
+* ìŠ¤í† ë¦¬ë³´ë“œ ì™„ì„±
+* React ê³µë¶€(life cycle method, async await)
 
-## ³»ÀÏ ÇÒ °Í
-* README »ý¼º, React °øºÎ
+## ë‚´ì¼ í•  ê²ƒ
+* README ìƒì„±, React ê³µë¶€
 
 # 2020.07.17
-## ¿À´Ã ÇÑ °Í
-* React ±âÃÊ °øºÎ, README »ý¼º
+## ì˜¤ëŠ˜ í•œ ê²ƒ
+* React ê¸°ì´ˆ ê³µë¶€, README ìƒì„±
 * [movieApp](https://github.com/jiwon1217/movie_app_2020)
 
 # 2020.07.18
-## ¿À´Ã ÇÑ °Í
-* ½ºÅÍµð
+## ì˜¤ëŠ˜ í•œ ê²ƒ
+* ìŠ¤í„°ë””
 
 # 2020.07.20
-## ¿À´Ã ÇÑ °Í
-* dstagram ÇÁ·ÎÁ§Æ® »ý¼º
+## ì˜¤ëŠ˜ í•œ ê²ƒ
+* dstagram í”„ë¡œì íŠ¸ ìƒì„±
+* SignUp, Login, Header ì»´í¬ë„ŒíŠ¸ ìƒì„±
