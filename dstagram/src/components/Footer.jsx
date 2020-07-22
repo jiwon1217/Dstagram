@@ -28,15 +28,23 @@ function Footer(props) {
 
     const classes = useStyles();
 
+    const onClickHome = () => {
+        window.location.href = "/posts";
+    };
+
+    const onClickProfile = () => {
+        window.location.href = "/user";
+    };
+
     return (
         <Grid item className={classes.root}>
-            <Fab color="primary" className={classes.Home}>
+            <Fab color="primary" className={classes.Home} onClick={onClickHome}>
                 <HomeIcon />
             </Fab>
             <Fab color="primary" className={classes.Add}>
                 <AddIcon />
             </Fab>
-            <Fab color="primary" className={classes.Person}>
+            <Fab color="primary" className={classes.Person} onClick={onClickProfile}>
                 <PersonIcon />
             </Fab>
         </Grid>

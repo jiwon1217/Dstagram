@@ -37,21 +37,34 @@ function Header(props) {
         objectFit: 'contain',
     }
 
+    const onClickLogo = () => {
+        window.location.href = "/posts";
+    };
+
+    const onClickLogout = () => {
+        window.location.href = "/login";
+    };
+
+    const onClickProfile = () => {
+        window.location.href = "/user";
+    };
+
     return (
+        
         <div className="navbar" style={navbarStyle}>
             <div className="header" style={headerStyle}>
-                <img src={logo} alt='logo' className="logo" style={logoStyle}></img>
+                <img src={logo} alt='logo' className="logo" style={logoStyle} onClick={onClickLogo}></img>
                 {/* <CardMedia className={classes.media} component="img" image ={logo} title="logo"></CardMedia> */}
                 <PopupState variant="popover" popupId="demo-popup-menu">
                     {(popupState) => (
                         <React.Fragment>
-                            <Fab size="small" color="primary" className={classes.profile} variant="contained" {...bindTrigger(popupState)}>
+                            <Fab size="small" color="primary" className={classes.profile} variant="round" {...bindTrigger(popupState)}>
                                 <PersonIcon />
                             </Fab>
                             <Menu {...bindMenu(popupState)}>
-                                <MenuItem onClick={popupState.close}>프로필</MenuItem>
+                                <MenuItem onClick={onClickProfile}>프로필</MenuItem>
                                 <MenuItem onClick={popupState.close}>글쓰기</MenuItem>
-                                <MenuItem onClick={popupState.close}>로그아웃</MenuItem>
+                                <MenuItem onClick={onClickLogout}>로그아웃</MenuItem>
                             </Menu>
                         </React.Fragment>
                     )}

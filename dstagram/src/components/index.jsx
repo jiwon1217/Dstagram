@@ -4,3 +4,4 @@ export {default as Header} from './Header';
 export {default as Posting} from './Posting';
 export {default as Feed} from './Feed';
 export {default as Footer} from './Footer';
+export {default as Profile} from './Profile';

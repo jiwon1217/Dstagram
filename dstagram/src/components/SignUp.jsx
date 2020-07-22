@@ -33,6 +33,10 @@ const useStyles = makeStyles(theme => ({
 function SignUp(props) {
     const classes = useStyles();
 
+    const onClickSignUp = () => {
+        window.location.href = "/login";
+    };
+
     return (
         <Box className={classes.root} display="flex" justifyContent="center">
             <Grid item xs={"auto"} display="flex" justifyContent="center">
@@ -77,6 +81,7 @@ function SignUp(props) {
                                 className={classes.signUpButton}
                                 variant="contained"
                                 color="primary"
+                                onClick={onClickSignUp}
                             >
                                 가입
                             </Button>

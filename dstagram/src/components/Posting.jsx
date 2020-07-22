@@ -53,32 +53,6 @@ function Posting(props) {
                 </CardContent>
             </Card>
         </Box>
-
-        <Box display="flex" justifyContent="center" alignItems="center">
-            <Card className={classes.root}>
-                <CardHeader
-                    avatar={<Avatar aria-label="recipe" className={classes.avatar}>R</Avatar>}
-                    action={
-                        <IconButton aria-label="settings">
-                            <MoreVertIcon />
-                        </IconButton>
-                    }
-                    title="Shrimp and Chorizo Paella"
-                    subheader="September 14, 2016"
-                />
-                <CardMedia
-                    className={classes.media}
-                    image="/static/images/cards/paella.jpg"
-                    title="Paella dish"
-                />
-                <CardContent>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                        This impressive paella is a perfect party dish and a fun meal to cook together with your
-                        guests. Add 1 cup of frozen peas along with the mussels, if you like.
-                </Typography>
-                </CardContent>
-            </Card>
-        </Box>
 </Grid>
 
         

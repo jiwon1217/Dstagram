@@ -33,6 +33,14 @@ const useStyles = makeStyles(theme => ({
 function Login(props) {
     const classes = useStyles();
 
+    const onClickLogin = () => {
+        window.location.href = "/posts";
+      };
+    
+      const onClickSignUp = () => {
+        window.location.href = "/users";
+      };
+
     return (
         <div>
             <Box className={classes.root} display="flex" justifyContent="center">
@@ -62,6 +70,7 @@ function Login(props) {
                                     className={classes.Button}
                                     variant="contained"
                                     color="primary"
+                                    onClick={onClickLogin}
                                 >
                                     로그인
                             </Button>
@@ -71,6 +80,7 @@ function Login(props) {
                                     className={classes.Button}
                                     variant="contained"
                                     color="primary"
+                                    onClick={onClickSignUp}
                                 >
                                     가입하기
                             </Button>
