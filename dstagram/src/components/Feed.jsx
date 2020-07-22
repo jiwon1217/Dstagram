@@ -1,15 +1,15 @@
 import React from 'react';
 import Header from './Header'
-import { makeStyles } from "@material-ui/core/styles";
+// import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Posting from "./Posting";
 
-const useStyles = makeStyles(theme => ({
-    home: {}
-}));
+// const useStyles = makeStyles(theme => ({
+//     home: {}
+// }));
 
 function Feed(props) {
-    const classes = useStyles();
+    // const classes = useStyles();
 
     return (
         <div>
