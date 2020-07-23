@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
         marginTop: 10
     },
     Home: {
-        marginLeft: 450,
+        marginLeft: 465,
         marginRight: 110
     },
     Add: {
@@ -32,16 +32,20 @@ function Footer(props) {
         window.location.href = "/posts";
     };
 
+    const onClickPostUp = () => {
+        window.location.href = "/post";
+    };
+
     const onClickProfile = () => {
         window.location.href = "/user";
     };
 
     return (
-        <Grid item className={classes.root}>
+        <Grid item xs ={"auto"} className={classes.root}>
             <Fab color="primary" className={classes.Home} onClick={onClickHome}>
                 <HomeIcon />
             </Fab>
-            <Fab color="primary" className={classes.Add}>
+            <Fab color="primary" className={classes.Add} onClick={onClickPostUp}>
                 <AddIcon />
             </Fab>
             <Fab color="primary" className={classes.Person} onClick={onClickProfile}>

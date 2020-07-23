@@ -41,14 +41,17 @@ function Header(props) {
         window.location.href = "/posts";
     };
 
-    const onClickLogout = () => {
-        window.location.href = "/login";
-    };
-
     const onClickProfile = () => {
         window.location.href = "/user";
     };
 
+    const onClickPostUp = () => {
+        window.location.href = "/post";
+    };
+    
+    const onClickLogout = () => {
+        window.location.href = "/login";
+    };
     return (
         
         <div className="navbar" style={navbarStyle}>
@@ -63,7 +66,7 @@ function Header(props) {
                             </Fab>
                             <Menu {...bindMenu(popupState)}>
                                 <MenuItem onClick={onClickProfile}>프로필</MenuItem>
-                                <MenuItem onClick={popupState.close}>글쓰기</MenuItem>
+                                <MenuItem onClick={onClickPostUp}>글쓰기</MenuItem>
                                 <MenuItem onClick={onClickLogout}>로그아웃</MenuItem>
                             </Menu>
                         </React.Fragment>
