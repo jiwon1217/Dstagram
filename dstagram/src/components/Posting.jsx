@@ -10,6 +10,7 @@ import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import tempImage from './tempImage.PNG';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -42,7 +43,7 @@ function Posting(props) {
                 />
                 <CardMedia
                     className={classes.media}
-                    image="/static/images/cards/paella.jpg"
+                    image={tempImage}
                     title="Paella dish"
                 />
                 <CardContent>
