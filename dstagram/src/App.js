@@ -9,21 +9,11 @@ function App() {
     <div className="App">
       
       <BrowserRouter>
-      {/* <Header/> */}
             <Route exact path="/login" component={Login} />
             <Route exact path="/posts" component={Feed} />
             <Route exact path="/users" component={SignUp} />
             <Route exact path="/user" component={Profile} />
-            
       </BrowserRouter>
-      
-      {/* <Header/>  
-      <SubHeader/> */}
-      {/* <Login/> */}
-      {/* <Login/>
-      <SignUp/>
-      <Feed/> */}
-      {/* <Footer/> */}
     </div>
   );
 }
