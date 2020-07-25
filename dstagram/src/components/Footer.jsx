@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
         marginTop: 10
     },
     Home: {
-        marginLeft: 465,
+        marginLeft: 450,
         marginRight: 110
     },
     Add: {
