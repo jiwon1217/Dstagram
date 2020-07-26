@@ -36,4 +36,11 @@
 ### 오늘 한 것
 * DeletePost, PostUp 컴포넌트 생성
 * 예쁘게 보이게 CSS 값 조금씩 조정
-##### 필요한 컴포넌트는 다 만든 것 같다 !! 내일부터는 로직 짜는데 필요한 공부를 해볼까나 ~  
+##### 필요한 컴포넌트는 다 만든 것 같다 !! 내일부터는 로직 짜는데 필요한 공부를 해볼까나 ~ 
+
+# 2020.07.25
+### 오늘 한 것
+* 스터디(Routing, Redux, Debounce, Throttle)
+* Footer margin 값 조정
+* Code Formatting(Prettier)
+
