@@ -6,10 +6,10 @@ import GridListTile from '@material-ui/core/GridListTile';
 import Box from '@material-ui/core/Box';
 import Avatar from '@material-ui/core/Avatar';
 import ExposureZeroSharpIcon from '@material-ui/icons/ExposureZeroSharp';
-import tempImage from './tempImage.PNG';
-import Footer from './Footer';
-import Header from './Header';
-import DetailPost from './DetailPost';
+import Header from '../section/Header';
+import Footer from '../section/Footer';
+import DetailPost from '../post/DetailPost';
+import tempImage from '../tempImage.PNG';
 
 const tileData = [
 	{

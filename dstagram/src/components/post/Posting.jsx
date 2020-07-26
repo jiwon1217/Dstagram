@@ -10,7 +10,7 @@ import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import tempImage from './tempImage.PNG';
+import tempImage from '../tempImage.PNG';
 
 const useStyles = makeStyles((theme) => ({
 	root: {

@@ -7,8 +7,8 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import CancelIcon from '@material-ui/icons/Cancel';
 import DoneIcon from '@material-ui/icons/Done';
-import Header from './Header';
-import tempImage from './tempImage.PNG';
+import Header from '../section/Header';
+import tempImage from '../tempImage.PNG';
 
 const useStyles = makeStyles((theme) => ({
 	root: {

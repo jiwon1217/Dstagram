@@ -6,7 +6,7 @@ import PersonIcon from '@material-ui/icons/Person';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
-import logo from './dstagramLogo.PNG';
+import logo from '../dstagramLogo.PNG';
 
 const useStyles = makeStyles((theme) => ({
 	profile: {

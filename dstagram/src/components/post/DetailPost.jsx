@@ -11,7 +11,7 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import CancelIcon from '@material-ui/icons/Cancel';
 import DoneIcon from '@material-ui/icons/Done';
 import DeletePost from './DeletePost';
-import tempImage from './tempImage.PNG';
+import tempImage from '../tempImage.PNG';
 
 const useStyles = makeStyles({
 	Image: {

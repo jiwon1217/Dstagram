@@ -1,8 +1,8 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import Header from './Header';
+import Header from '../section/Header';
 import Posting from './Posting';
-import Footer from './Footer';
+import Footer from '../section/Footer';
 
 function Feed(props) {
 	return (

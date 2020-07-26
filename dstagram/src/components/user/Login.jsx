@@ -5,7 +5,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 import Paper from '@material-ui/core/Paper';
-import logo from './dstagramLogo.PNG';
+import logo from '../dstagramLogo.PNG';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
