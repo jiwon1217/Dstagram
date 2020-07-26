@@ -40,7 +40,13 @@
 
 # 2020.07.25
 ### 오늘 한 것
-* 스터디(Routing, Redux, Debounce, Throttle)
+* 스터디(Routing, Redux, HOC, Debounce, Throttle)
 * Footer margin 값 조정
 * Code Formatting(Prettier)
 
+# 2020.07.26
+### 오늘 한 것
+* state, props, context, axios 공부
+* 비슷한 컴포넌트끼리 묶어서 컴포넌트를 트리 구조로 관리
+##### 스터디 할 때는 다 이해했다고 생각해서 복습을 안했는데 막상 코드에 적용하려고 하니까 어떻게 할지 모르겠어서 공부를 다시했다
+##### 복습도 틈틈히 해야겠다...!!
