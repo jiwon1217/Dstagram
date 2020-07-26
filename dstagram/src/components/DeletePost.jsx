@@ -8,28 +8,37 @@ import CancelIcon from '@material-ui/icons/Cancel';
 import DoneIcon from '@material-ui/icons/Done';
 
 function DeletePost(props) {
-    const { open, handleClose } = props;
+	const { open, handleClose } = props;
 
-    return (
-        <Box>
-            <Dialog
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="alert-dialog-title"
-                aria-describedby="alert-dialog-description"
-            >
-                <DialogTitle id="alert-dialog-title">{"삭제하시겠습니까?"}</DialogTitle>
-                <DialogActions>
-                    <Button onClick={handleClose} color="primary" startIcon={<CancelIcon/>}>
-                        취소
-                    </Button>
-                    <Button onClick={handleClose} color="primary" autoFocus startIcon={<DoneIcon/>}> 
-                        확인
-                    </Button>
-                </DialogActions>
-            </Dialog>
-        </Box>
-    );
+	return (
+		<Box>
+			<Dialog
+				open={open}
+				onClose={handleClose}
+				aria-labelledby='alert-dialog-title'
+				aria-describedby='alert-dialog-description'
+			>
+				<DialogTitle id='alert-dialog-title'>{'삭제하시겠습니까?'}</DialogTitle>
+				<DialogActions>
+					<Button
+						onClick={handleClose}
+						color='primary'
+						startIcon={<CancelIcon />}
+					>
+						취소
+					</Button>
+					<Button
+						onClick={handleClose}
+						color='primary'
+						autoFocus
+						startIcon={<DoneIcon />}
+					>
+						확인
+					</Button>
+				</DialogActions>
+			</Dialog>
+		</Box>
+	);
 }
 
 export default DeletePost;
