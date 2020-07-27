@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
 	makeStyles,
 	Grid,
@@ -8,6 +8,7 @@ import {
 	Paper,
 } from '@material-ui/core';
 import logo from '../dstagramLogo.PNG';
+import Api from '../../jamAPIs/JamAPIs';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -34,8 +35,35 @@ const useStyles = makeStyles((theme) => ({
 function SignUp(props) {
 	const classes = useStyles();
 
-	const onClickSignUp = () => {
-		props.history.replace('/login');
+	const [userValues, setUserValues] = useState({
+		PhoneOrEmail: '',
+		name: '',
+		nickname: '',
+		password: '',
+	});
+
+	const handleUserValues = (key) => (evt) => {
+		setUserValues({ ...userValues, [key]: evt.target.value });
+	};
+
+	const onClickSignUp = (e) => {
+		e.preventDefault();
+
+		Api({
+			method: 'POST',
+			url: '/signup',
+			header: {
+				'Content-Type': 'multipart/form-data',
+			},
+			data: userValues,
+		})
+			.then((res) => {
+				console.log('성공');
+				props.history.replace('/login');
+			})
+			.catch((err) => {
+				console.log('실패');
+			});
 	};
 
 	return (
@@ -50,6 +78,8 @@ function SignUp(props) {
 								color='primary'
 								label='휴대폰 번호 또는 이메일 주소'
 								variant='filled'
+								value={userValues.PhoneOrEmail}
+								onChange={handleUserValues('PhoneOrEmail')}
 							/>
 						</Grid>
 						<Grid item>
@@ -58,6 +88,8 @@ function SignUp(props) {
 								color='primary'
 								label='성명'
 								variant='filled'
+								value={userValues.name}
+								onChange={handleUserValues('name')}
 							/>
 						</Grid>
 						<Grid item>
@@ -66,6 +98,8 @@ function SignUp(props) {
 								color='primary'
 								label='사용자 이름'
 								variant='filled'
+								value={userValues.nickname}
+								onChange={handleUserValues('nickname')}
 							/>
 						</Grid>
 						<Grid item>
@@ -75,6 +109,8 @@ function SignUp(props) {
 								label='비밀번호'
 								type='password'
 								variant='filled'
+								value={userValues.password}
+								onChange={handleUserValues('password')}
 							/>
 						</Grid>
 						<Grid item>
