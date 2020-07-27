@@ -1,6 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
+import { BrowserRouter, Route } from 'react-router-dom';
 import { SignUp, Login, Feed, PostUp, Profile } from './components';
 
 function App() {

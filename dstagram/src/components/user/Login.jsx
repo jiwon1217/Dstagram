@@ -1,10 +1,12 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-import Box from '@material-ui/core/Box';
-import Paper from '@material-ui/core/Paper';
+import {
+	makeStyles,
+	Grid,
+	TextField,
+	Button,
+	Box,
+	Paper,
+} from '@material-ui/core';
 import logo from '../dstagramLogo.PNG';
 
 const useStyles = makeStyles((theme) => ({

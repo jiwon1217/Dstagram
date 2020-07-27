@@ -1,11 +1,12 @@
 import React from 'react';
-import Box from '@material-ui/core/Box';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import DialogActions from '@material-ui/core/DialogActions';
-import CancelIcon from '@material-ui/icons/Cancel';
-import DoneIcon from '@material-ui/icons/Done';
+import {
+	Box,
+	Button,
+	Dialog,
+	DialogTitle,
+	DialogActions,
+} from '@material-ui/core';
+import { Cancel, Done } from '@material-ui/icons';
 
 function DeletePost(props) {
 	const { open, handleClose } = props;
@@ -20,18 +21,14 @@ function DeletePost(props) {
 			>
 				<DialogTitle id='alert-dialog-title'>{'삭제하시겠습니까?'}</DialogTitle>
 				<DialogActions>
-					<Button
-						onClick={handleClose}
-						color='primary'
-						startIcon={<CancelIcon />}
-					>
+					<Button onClick={handleClose} color='primary' startIcon={<Cancel />}>
 						취소
 					</Button>
 					<Button
 						onClick={handleClose}
 						color='primary'
 						autoFocus
-						startIcon={<DoneIcon />}
+						startIcon={<Done />}
 					>
 						확인
 					</Button>

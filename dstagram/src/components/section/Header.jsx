@@ -1,10 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
-import Fab from '@material-ui/core/Fab';
+import { makeStyles, Fab, Menu, MenuItem } from '@material-ui/core';
 import PersonIcon from '@material-ui/icons/Person';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
 import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
 import logo from '../dstagramLogo.PNG';
 

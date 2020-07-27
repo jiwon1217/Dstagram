@@ -1,11 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Fab from '@material-ui/core/Fab';
-import AddIcon from '@material-ui/icons/Add';
-import HomeIcon from '@material-ui/icons/Home';
-import PersonIcon from '@material-ui/icons/Person';
+import { makeStyles, Grid, Fab } from '@material-ui/core';
+import { Add, Home, Person } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -43,13 +39,13 @@ function Footer(props) {
 	return (
 		<Grid item xs={'auto'} className={classes.root}>
 			<Fab color='primary' className={classes.Home} onClick={onClickHome}>
-				<HomeIcon />
+				<Home />
 			</Fab>
 			<Fab color='primary' className={classes.Add} onClick={onClickPostUp}>
-				<AddIcon />
+				<Add />
 			</Fab>
 			<Fab color='primary' className={classes.Person} onClick={onClickProfile}>
-				<PersonIcon />
+				<Person />
 			</Fab>
 		</Grid>
 	);

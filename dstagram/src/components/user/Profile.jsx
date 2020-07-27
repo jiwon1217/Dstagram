@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
-import Box from '@material-ui/core/Box';
-import Avatar from '@material-ui/core/Avatar';
+import {
+	makeStyles,
+	Typography,
+	GridList,
+	GridListTile,
+	Box,
+	Avatar,
+} from '@material-ui/core';
 import ExposureZeroSharpIcon from '@material-ui/icons/ExposureZeroSharp';
 import Header from '../section/Header';
 import Footer from '../section/Footer';

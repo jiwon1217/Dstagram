@@ -1,12 +1,13 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-import Box from '@material-ui/core/Box';
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
-import CancelIcon from '@material-ui/icons/Cancel';
-import DoneIcon from '@material-ui/icons/Done';
+import {
+	makeStyles,
+	Grid,
+	Paper,
+	Box,
+	Button,
+	TextField,
+} from '@material-ui/core';
+import { Cancel, Done } from '@material-ui/icons';
 import Header from '../section/Header';
 import tempImage from '../tempImage.PNG';
 
@@ -80,7 +81,7 @@ function PostUp(props) {
 										variant='outlined'
 										color='primary'
 										size='small'
-										startIcon={<CancelIcon />}
+										startIcon={<Cancel />}
 										onClick={onClickCancel}
 									>
 										취소
@@ -90,7 +91,7 @@ function PostUp(props) {
 										variant='outlined'
 										color='primary'
 										size='small'
-										startIcon={<DoneIcon />}
+										startIcon={<Done />}
 										onClick={onClickComplete}
 									>
 										완료

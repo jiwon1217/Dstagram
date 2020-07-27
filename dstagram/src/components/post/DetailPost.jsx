@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogContent from '@material-ui/core/DialogContent';
-import TextField from '@material-ui/core/TextField';
-import UpdateIcon from '@material-ui/icons/Update';
-import DeleteIcon from '@material-ui/icons/Delete';
-import CancelIcon from '@material-ui/icons/Cancel';
-import DoneIcon from '@material-ui/icons/Done';
+import {
+	makeStyles,
+	Grid,
+	Box,
+	Button,
+	Dialog,
+	DialogContent,
+	TextField,
+} from '@material-ui/core';
+import { Update, Delete, Cancel, Done } from '@material-ui/icons';
 import DeletePost from './DeletePost';
 import tempImage from '../tempImage.PNG';
 
@@ -86,7 +85,7 @@ function DetailPost(props) {
 									variant='outlined'
 									color='primary'
 									size='small'
-									startIcon={<CancelIcon />}
+									startIcon={<Cancel />}
 									onClick={onClickCancel}
 								>
 									취소
@@ -96,7 +95,7 @@ function DetailPost(props) {
 									variant='outlined'
 									color='primary'
 									size='small'
-									startIcon={<DoneIcon />}
+									startIcon={<Done />}
 									onClick={onClickComplete}
 								>
 									완료
@@ -109,7 +108,7 @@ function DetailPost(props) {
 									variant='outlined'
 									color='primary'
 									size='small'
-									startIcon={<UpdateIcon />}
+									startIcon={<Update />}
 									onClick={onClickUpdate}
 								>
 									수정
@@ -119,7 +118,7 @@ function DetailPost(props) {
 									variant='outlined'
 									color='primary'
 									size='small'
-									startIcon={<DeleteIcon />}
+									startIcon={<Delete />}
 									onClick={onClickDelete}
 								>
 									삭제
