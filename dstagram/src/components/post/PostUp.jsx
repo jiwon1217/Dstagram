@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
 	makeStyles,
 	Grid,
@@ -10,6 +10,7 @@ import {
 import { Cancel, Done } from '@material-ui/icons';
 import Header from '../section/Header';
 import tempImage from '../tempImage.PNG';
+import Api from '../../jamAPIs/JamAPIs';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -28,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
 		width: 450,
 		height: 500,
 	},
-	Cancle: {
+	Cancel: {
 		marginRight: 10,
 	},
 	Complete: {
@@ -39,11 +40,41 @@ const useStyles = makeStyles((theme) => ({
 function PostUp(props) {
 	const classes = useStyles();
 
-	const onClickCancel = () => {
-		props.history.goBack();
+	const [content, setContent] = useState({ content: '' });
+	const [images, setImages] = useState({ images: [] });
+
+	const handleImageChange = (evt) => {
+		setImages([evt.target.value]);
 	};
 
-	const onClickComplete = () => {
+	const handleContentChange = (evt) => {
+		setContent(evt.target.value);
+	};
+
+	const onClickComplete = (evt) => {
+		evt.preventDefault();
+
+		Api({
+			method: 'POST',
+			url: '/posts',
+			header: {
+				'Content-Type': 'multipart/form-data',
+			},
+			data: {
+				content: content,
+				images: images,
+			},
+		})
+			.then((res) => {
+				console.log('성공');
+				props.history.goBack();
+			})
+			.catch((err) => {
+				console.log('실패');
+			});
+	};
+
+	const onClickCancel = () => {
 		props.history.goBack();
 	};
 
@@ -62,7 +93,12 @@ function PostUp(props) {
 								/>
 							</Grid>
 							<Grid item>
-								<input type='file' />
+								<input
+									type='file'
+									id='file'
+									multiple
+									onChange={handleImageChange}
+								/>
 							</Grid>
 							<Grid item xs={'auto'}>
 								<TextField
@@ -72,12 +108,13 @@ function PostUp(props) {
 									multiline
 									rows={3}
 									variant='outlined'
+									onChange={handleContentChange}
 								/>
 							</Grid>
 							<Grid item>
 								<Box>
 									<Button
-										className={classes.Cancle}
+										className={classes.Cancel}
 										variant='outlined'
 										color='primary'
 										size='small'

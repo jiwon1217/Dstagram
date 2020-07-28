@@ -51,7 +51,7 @@ function SignUp(props) {
 
 		Api({
 			method: 'POST',
-			url: '/signup',
+			url: '/users',
 			header: {
 				'Content-Type': 'multipart/form-data',
 			},

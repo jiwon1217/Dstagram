@@ -1,11 +1,9 @@
 {
-	"signup": [
+	"posts": [
 		{
-			"PhoneOrEmail": "asdas",
-			"name": "asdasd",
-			"nickname": "1231231",
-			"password": "123123123",
-			"id": "7yKGSvn"
+			"content": "힘들어",
+			"images": ["C:\\fakepath\\logo512.png"],
+			"id": 1
 		}
 	]
 }
