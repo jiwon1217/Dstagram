@@ -1,9 +1,18 @@
 {
-	"posts": [
-		{
-			"content": "힘들어",
-			"images": ["C:\\fakepath\\logo512.png"],
-			"id": 1
-		}
-	]
+  "posts": [
+    {
+      "content": "힘들어",
+      "images": [
+        "C:\\fakepath\\logo512.png"
+      ],
+      "id": 1
+    },
+    {
+      "content": "bbbb",
+      "images": [
+        "C:\\fakepath\\logo512.png"
+      ],
+      "id": 2
+    }
+  ]
 }

@@ -12,6 +12,7 @@ import Header from '../section/Header';
 import Footer from '../section/Footer';
 import DetailPost from '../post/DetailPost';
 import tempImage from '../tempImage.PNG';
+import Api from '../../jamAPIs/JamAPIs';
 
 const tileData = [
 	{
@@ -98,7 +99,6 @@ const tileData = [
 ];
 
 const useStyles = makeStyles((theme) => ({
-	userInfo: {},
 	root: {
 		marginRight: 15,
 		marginTop: 5,
@@ -119,10 +119,30 @@ function Profile() {
 	const classes = useStyles();
 
 	const [Detail, setDetail] = useState(false);
+	//	const [posting, setPosting] = useState([]);
 
 	const onClickImage = () => {
 		setDetail(true);
 	};
+
+	// const onClickImage = (evt) => {
+	// 	evt.preventDefault();
+
+	// 	Api.get('/posts', {
+	// 		params: {
+	// 			id: 1,
+	// 		},
+	// 	})
+	// 		.then((res) => {
+	// 			setPosting(res.data);
+	// 			console.log(res.data);
+	// 			console.log('성공');
+	// 		})
+	// 		.catch((err) => {
+	// 			console.log('실패');
+	// 		});
+	// 	setDetail(true);
+	// };
 
 	return (
 		<div>

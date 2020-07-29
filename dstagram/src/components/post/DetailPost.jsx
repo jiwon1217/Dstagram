@@ -23,7 +23,7 @@ const useStyles = makeStyles({
 	Delete: {
 		marginLeft: 10,
 	},
-	Cancle: {
+	Cancel: {
 		marginRight: 10,
 	},
 	Complete: {
@@ -81,7 +81,7 @@ function DetailPost(props) {
 						{isUpdate ? (
 							<Box>
 								<Button
-									className={classes.Cancle}
+									className={classes.Cancel}
 									variant='outlined'
 									color='primary'
 									size='small'
