@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Footer(props) {
 	const classes = useStyles();
+	const email = window.localStorage.getItem('email');
 
 	const onClickHome = () => {
 		props.history.push('/posts');
@@ -33,7 +34,7 @@ function Footer(props) {
 	};
 
 	const onClickProfile = () => {
-		props.history.push('/user');
+		props.history.push(`/users/${email}`);
 	};
 
 	return (

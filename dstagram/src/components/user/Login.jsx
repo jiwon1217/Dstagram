@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
 	makeStyles,
 	Grid,
@@ -8,6 +8,7 @@ import {
 	Paper,
 } from '@material-ui/core';
 import logo from '../dstagramLogo.PNG';
+import Api from '../../jamAPIs/JamAPIs';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -33,8 +34,34 @@ const useStyles = makeStyles((theme) => ({
 
 function Login(props) {
 	const classes = useStyles();
+	const [user, setUser] = useState({ email: '', password: '' });
+
+	const handleTextFieldChange = (key) => (evt) => {
+		setUser({
+			...user,
+			[key]: evt.target.value,
+		});
+	};
 
 	const onClickLogin = () => {
+		Api({
+			method: 'POST',
+			url: '/login',
+			data: user,
+		})
+			.then((res) => {
+				console.log(res.data);
+				login(res.data);
+				console.log('성공');
+			})
+			.catch((err) => {
+				console.log('실패');
+			});
+	};
+
+	const login = (data) => {
+		window.localStorage.setItem('accessToken', data.token);
+		window.localStorage.setItem('email', data.email);
 		props.history.push('/posts');
 	};
 
@@ -53,8 +80,11 @@ function Login(props) {
 								<TextField
 									className={classes.rowfield}
 									color='primary'
-									label='전화번호, 사용자 이름 또는 이메일'
+									label='이메일'
 									variant='filled'
+									id='email'
+									value={user.email}
+									onChange={handleTextFieldChange('email')}
 								/>
 							</Grid>
 							<Grid item>
@@ -64,6 +94,9 @@ function Login(props) {
 									label='비밀번호'
 									type='password'
 									variant='filled'
+									id='password'
+									value={user.password}
+									onChange={handleTextFieldChange('password')}
 								/>
 							</Grid>
 							<Grid item>

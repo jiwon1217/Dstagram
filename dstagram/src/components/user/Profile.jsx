@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { withRouter } from 'react-router-dom';
 import {
 	makeStyles,
 	Typography,
@@ -57,45 +58,6 @@ const tileData = [
 		author: 'author',
 		cols: 2,
 	},
-	{
-		id: 8,
-		title: 'Image8',
-		author: 'author',
-		cols: 1,
-	},
-	{
-		id: 9,
-		title: 'Image9',
-		author: 'author',
-		cols: 2,
-	},
-	{
-		id: 10,
-		title: 'Image10',
-		author: 'author',
-		cols: 1,
-	},
-	{
-		id: 11,
-		title: 'Image11',
-		author: 'author',
-		cols: 1,
-	},
-	{
-		id: 12,
-		title: 'Image12',
-		author: 'author',
-		cols: 1,
-	},
-	{
-		id: 13,
-		title: 'Image13',
-		author: 'author',
-		cols: 1,
-	},
-	// {
-	//   [etc...]
-	// },
 ];
 
 const useStyles = makeStyles((theme) => ({
@@ -115,34 +77,27 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-function Profile() {
+function Profile(props) {
 	const classes = useStyles();
 
 	const [Detail, setDetail] = useState(false);
-	//	const [posting, setPosting] = useState([]);
+	const [userInfo, setUserInfo] = useState(null);
+	const email = window.localStorage.getItem('email');
 
 	const onClickImage = () => {
 		setDetail(true);
 	};
 
-	// const onClickImage = (evt) => {
-	// 	evt.preventDefault();
-
-	// 	Api.get('/posts', {
-	// 		params: {
-	// 			id: 1,
-	// 		},
-	// 	})
-	// 		.then((res) => {
-	// 			setPosting(res.data);
-	// 			console.log(res.data);
-	// 			console.log('성공');
-	// 		})
-	// 		.catch((err) => {
-	// 			console.log('실패');
-	// 		});
-	// 	setDetail(true);
-	// };
+	useEffect(() => {
+		Api.get(`/users/${email}`)
+			.then((res) => {
+				setUserInfo(res.data.nickname);
+				console.log('성공');
+			})
+			.catch((err) => {
+				console.log('실패');
+			});
+	}, []);
 
 	return (
 		<div>
@@ -157,7 +112,7 @@ function Profile() {
 				<Box p={2} flexShrink={1} bgcolor='grey.300' justifyContent='center'>
 					<Avatar>U</Avatar>
 					<Typography color='primary' component='p'>
-						닉네임
+						{userInfo}
 					</Typography>
 				</Box>
 				<Box
@@ -189,4 +144,4 @@ function Profile() {
 	);
 }
 
-export default Profile;
+export default withRouter(Profile);

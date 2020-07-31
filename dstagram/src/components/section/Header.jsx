@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Header(props) {
 	const classes = useStyles();
+	const email = window.localStorage.getItem('email');
 
 	const navbarStyle = {
 		backgroundColor: 'white',
@@ -39,7 +40,7 @@ function Header(props) {
 	};
 
 	const onClickProfile = () => {
-		props.history.push('/user');
+		props.history.push(`/users/${email}`);
 	};
 
 	const onClickPostUp = () => {
@@ -47,7 +48,9 @@ function Header(props) {
 	};
 
 	const onClickLogout = () => {
-		props.history.push('/login');
+		window.localStorage.removeItem('accessToken');
+		window.localStorage.removeItem('email');
+		props.history.replace('/login');
 	};
 	return (
 		<div className='navbar' style={navbarStyle}>

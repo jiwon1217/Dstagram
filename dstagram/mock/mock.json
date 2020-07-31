@@ -1,18 +1,88 @@
 {
-  "posts": [
-    {
-      "content": "힘들어",
-      "images": [
-        "C:\\fakepath\\logo512.png"
-      ],
-      "id": 1
-    },
-    {
-      "content": "bbbb",
-      "images": [
-        "C:\\fakepath\\logo512.png"
-      ],
-      "id": 2
-    }
-  ]
+	"users": [
+		{
+			"email": "aaasa",
+			"name": "a",
+			"nickname": "a",
+			"password": "123123123",
+			"id": "aa"
+		},
+		{
+			"PhoneOrEmail": "aaa",
+			"name": "a",
+			"nickname": "aaa",
+			"password": "a",
+			"id": "a"
+		},
+		{
+			"PhoneOrEmail": "a",
+			"name": "a",
+			"nickname": "a",
+			"password": "a",
+			"id": "zOCFo3X"
+		}
+	],
+	"posts": [
+		{
+			"content": "힘들어",
+			"images": ["C:\\fakepath\\logo512.png"],
+			"id": 1
+		},
+		{
+			"content": "bbbb",
+			"images": ["C:\\fakepath\\logo512.png"],
+			"id": 2
+		},
+		{
+			"content": {
+				"content": ""
+			},
+			"images": {
+				"images": []
+			},
+			"id": 3
+		},
+		{
+			"content": "aaa",
+			"images": ["C:\\fakepath\\dstagramLogo.PNG"],
+			"id": 4
+		}
+	],
+	"login": [
+		{
+			"email": "aaaaaa",
+			"password": "11231",
+			"id": 1
+		},
+		{
+			"email": "a",
+			"password": "a",
+			"id": 2
+		},
+		{
+			"email": "a",
+			"password": "a",
+			"id": 3
+		},
+		{
+			"email": "aa",
+			"password": "aa",
+			"id": 4
+		},
+		{
+			"email": "a",
+			"password": "a",
+			"id": 5
+		},
+		{
+			"email": "a",
+			"password": "a",
+			"id": 6
+		},
+		{
+			"email": "a",
+			"password": "a",
+			"id": 7
+		}
+	]
 }
