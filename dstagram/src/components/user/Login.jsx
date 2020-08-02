@@ -13,6 +13,7 @@ import Api from '../../jamAPIs/JamAPIs';
 const useStyles = makeStyles((theme) => ({
 	root: {
 		marginTop: 15,
+		justifyContent: 'center',
 	},
 	paper: {
 		height: 800,
@@ -71,8 +72,8 @@ function Login(props) {
 
 	return (
 		<div>
-			<Box className={classes.root} display='flex' justifyContent='center'>
-				<Grid item xs={'auto'} display='flex' justifyContent='center'>
+			<Box className={classes.root} display='flex'>
+				<Grid item xs={'auto'} display='flex'>
 					<Paper className={classes.paper} elevation={4}>
 						<Grid container direction='column' alignItems='center' spacing={2}>
 							<img src={logo} alt='logo' className='center' width='200'></img>

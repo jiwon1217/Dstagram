@@ -97,7 +97,7 @@ function Profile(props) {
 			.catch((err) => {
 				console.log('실패');
 			});
-	}, []);
+	});
 
 	return (
 		<div>
