@@ -37,7 +37,7 @@ function SignUp(props) {
 	const classes = useStyles();
 
 	const [userValues, setUserValues] = useState({
-		PhoneOrEmail: '',
+		email: '',
 		name: '',
 		nickname: '',
 		password: '',
@@ -79,8 +79,8 @@ function SignUp(props) {
 								color='primary'
 								label='휴대폰 번호 또는 이메일 주소'
 								variant='filled'
-								value={userValues.PhoneOrEmail}
-								onChange={handleUserValues('PhoneOrEmail')}
+								value={userValues.email}
+								onChange={handleUserValues('email')}
 							/>
 						</Grid>
 						<Grid item>

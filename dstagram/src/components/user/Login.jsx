@@ -67,7 +67,7 @@ function Login(props) {
 	};
 
 	const onClickSignUp = () => {
-		props.history.push('/signup');
+		props.history.push('/users');
 	};
 
 	return (
